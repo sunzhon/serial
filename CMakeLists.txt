@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(serial)
  
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # generate a lib
  add_library(${PROJECT_NAME}
     src/serial.cc
@@ -14,6 +15,6 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 target_link_libraries(${PROJECT_NAME} rt pthread)
 
- ## Include headers
- target_include_directories(${PROJECT_NAME} PUBLIC include)
+## Include headers
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
